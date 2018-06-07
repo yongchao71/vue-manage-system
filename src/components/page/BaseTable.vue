@@ -7,7 +7,7 @@
         </div>
         <div class="container">
             <div class="handle-box">
-                <el-button type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
+                <el-button type="primary" icon="delete" class="handle-del mr10 aaaa" @click="delAll">批量删除</el-button>
                 <el-select v-model="select_cate" placeholder="筛选省份" class="handle-select mr10">
                     <el-option key="1" label="广东省" value="广东省"></el-option>
                     <el-option key="2" label="湖南省" value="湖南省"></el-option>
@@ -184,7 +184,7 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .handle-box {
         margin-bottom: 20px;
     }

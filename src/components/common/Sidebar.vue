@@ -37,6 +37,11 @@
                     },
                     {
                         icon: 'el-icon-tickets',
+                        index: 'demo',
+                        title: '测试demo'
+                    },
+                    {
+                        icon: 'el-icon-tickets',
                         index: 'table',
                         title: '基础表格'
                     },
@@ -99,13 +104,13 @@
         created(){
             // 通过 Event Bus 进行组件间通信，来折叠侧边栏
             bus.$on('collapse', msg => {
-                this.collapse = msg;
+               this.collapse = msg;
             })
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .sidebar{
         display: block;
         position: absolute;
