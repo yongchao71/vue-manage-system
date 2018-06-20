@@ -3,6 +3,8 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
+
+
 export default new Router({
     routes: [
         {
@@ -21,7 +23,7 @@ export default new Router({
                 },
                 {
                     path: '/demo',
-                    component: resolve => require(['../components/page/BaseTable/index.vue'], resolve),
+                    component: resolve => require(['../components/page/basetable/index.vue'], resolve),
                     meta: { title: '测试demo' }
                 },
                 {
