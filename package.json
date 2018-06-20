@@ -12,6 +12,8 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.4.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
     "mavon-editor": "^2.6.5",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
