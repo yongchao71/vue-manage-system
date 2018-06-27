@@ -27,7 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     output: {
         path: config.build.assetsRoot,
         filename: utils.assetsPath('js/[name].[chunkhash:8].js'),
-        chunkFilename: utils.assetsPath('js/[id].[chunkhash:8].js')
+        chunkFilename: utils.assetsPath('js/[name].[chunkhash:8].js')
     },
     optimization: {
         runtimeChunk: {
@@ -64,8 +64,13 @@ const webpackConfig = merge(baseWebpackConfig, {
             'process.env': env
         }),
         new MiniCssExtractPlugin({
-            filename: "css/app.[name].[chunkhash:8].css",
-            chunkFilename: "css/app.[id].[chunkhash:8].css"
+            filename: "css/[name].[chunkhash:8].css",
+            chunkFilename: "css/[name].[chunkhash:8].css"
+        }),
+        new webpack.ProvidePlugin({
+            $:"jquery",
+            jQuery:"jquery",
+            "jsencrypt":"jsencrypt"
         }),
         new OptimizeCSSAssetsPlugin({  
             assetNameRegExp: /\.style\.css$/g,

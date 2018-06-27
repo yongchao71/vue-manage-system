@@ -14,11 +14,13 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    vendor:["jquery","jsencrypt"]
   },
   output: {
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    filename: 'js/[name].js',
+    chunkFilename: "js/[name].[chunkhash].js",
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -29,6 +31,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'static': path.resolve(__dirname, '../static'),
+      'jquery': path.resolve(__dirname, '../static/js/jquery/jquery.min.js'),
+      'jsencrypt': path.resolve(__dirname, '../static/js/jsencrypt/jsencrypt.min.js'),
     }
   },
   module: {

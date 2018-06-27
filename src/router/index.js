@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-
+var login = resolve => require.ensure([], () => resolve(require('../components/page/Login.vue')), 'login');
 
 export default new Router({
     routes: [
@@ -81,11 +81,13 @@ export default new Router({
         },
         {
             path: '/login',
-            component: resolve => require(['../components/page/Login.vue'], resolve)
+           // component: resolve => require(['../components/page/Login.vue'], resolve)
+            component: login
         },
         {
             path: '/404',
-            component: resolve => require(['../components/page/404.vue'], resolve)
+           // component: resolve => require(['../components/page/404.vue'], resolve)
+            component: ()=>import('../components/page/404.vue')  
         },
         {
             path: '/403',
