@@ -5,8 +5,8 @@
   "author": "lin-xin <2981207131@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --mode development",
-    "build": "node build/build.js  --mode production"
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "build": "node build/build.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
