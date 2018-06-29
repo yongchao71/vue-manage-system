@@ -6,8 +6,7 @@ const path = require('path')
 
 module.exports = {
   dev: {
-    mode: "development",
-    // Paths
+    //mode: "development",
     assetsSubDirectory: './',
     assetsPublicPath: '/',
     proxyTable: {
@@ -49,7 +48,7 @@ module.exports = {
 
   build: {
     // Template for index.html
-    mode: "production",
+    // mode: "production",
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
